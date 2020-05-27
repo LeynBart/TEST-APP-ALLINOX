@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="PageArticlebox.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PageArtikel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PageItem.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PageLogin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PageMastercarton.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PagePallet.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PageArticlebox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PageArtikel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PageItem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PageLogin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PageMastercarton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PagePallet.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

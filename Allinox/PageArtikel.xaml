@@ -1,0 +1,64 @@
+﻿<Page x:Class="Allinox.PageArtikel"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Allinox"
+      mc:Ignorable="d" 
+      d:DesignHeight="560" d:DesignWidth="480"
+      Title="PageArtikel">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="168"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="27"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"></ColumnDefinition>
+            <ColumnDefinition Width="120"></ColumnDefinition>
+            <ColumnDefinition Width="120"></ColumnDefinition>
+            <ColumnDefinition Width="120"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="lblSearchArtikel" Margin="10,0,0,0" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Content="Search Artikel" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+
+        <TextBox x:Name="txbSearch" Margin="10,0,0,0" Width="440" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4"  HorizontalAlignment="Left" Text="Search artikel" VerticalAlignment="Top" TextChanged="TxbSearch_TextChanged"/>
+
+        <DataGrid x:Name="dgArtikel" Margin="10,0,0,0" Width="440" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" HorizontalAlignment="Left" VerticalAlignment="Top" AutoGenerateColumns="False" HorizontalScrollBarVisibility="Disabled" FontSize="10" SelectionChanged="DgArtikel_SelectionChanged" CanUserAddRows="False" CanUserDeleteRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="artNr" Binding="{Binding artNr}" Width="80"></DataGridTextColumn>
+                <DataGridTextColumn Header="artOmschrijving" Binding="{Binding artOmschrijving}" Width="360"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Label x:Name="lblArtikelnr" Margin="10,0,0,0" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" Content="Seleted Artikel" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontWeight="Bold"/>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4">
+            <TextBox x:Name="txbArtikelNr" Margin="10,0,0,0" HorizontalAlignment="Left"  Text="" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="80" IsEnabled="False" FontWeight="Bold" Background="#ffdd00"/>
+            <TextBox x:Name="txbArtikelOmschrijving" Margin="10,0,0,0" HorizontalAlignment="Left" Text="" TextWrapping="Wrap" Width="345" VerticalAlignment="Bottom" FontWeight="Bold" Background="#ffdd00" IsEnabled="False"/>
+        </StackPanel>
+      
+        <Label x:Name="lblArtikelPrio" Margin="10,0,0,0" Grid.Row="6" Grid.Column="0"  Content="Prio Artikels" HorizontalAlignment="Left"  VerticalAlignment="Top" Foreground="Blue" FontWeight="Bold"/>
+
+        <DataGrid x:Name="dgArtikelPrio" MinHeight="100" Margin="10,0,0,0" Width="440" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="4" HorizontalAlignment="Left" VerticalAlignment="Top" AutoGenerateColumns="False" HorizontalScrollBarVisibility="Disabled" FontSize="10" SelectionChanged="DgArtikelPrio_SelectionChanged" CanUserAddRows="False" CanUserDeleteRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="artNr" Binding="{Binding artNr}" Width="80"></DataGridTextColumn>
+                <DataGridTextColumn Header="artOmschrijving" Binding="{Binding artOmschrijving}" Width="360"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button x:Name="btnReset" Margin="20,0,0,0" Grid.Row="11" Grid.Column="0" Width="80" Height="30" Content="Reset" HorizontalAlignment="Left" VerticalAlignment="Top" Click="BtnReset_Click"/>
+        <Button x:Name="btnAdd"  Grid.Row="11" Grid.Column="1" Grid.ColumnSpan="2"  Width="80" Height="30" Content="Add to prio" HorizontalAlignment="Center" VerticalAlignment="Top" Click="BtnAdd_Click"/>
+        <Button x:Name="btnPallet" Margin="20,0,0,0" Grid.Row="11" Grid.Column="3" Width="80" Height="30" Content="Pallet" HorizontalAlignment="Left" VerticalAlignment="Top" Click="BtnPallet_Click"/>
+
+
+    </Grid>
+</Page>

@@ -1,0 +1,76 @@
+﻿<Page x:Class="Allinox.PageItem"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Allinox"
+      mc:Ignorable="d" 
+      d:DesignHeight="560" d:DesignWidth="480"
+      Title="PageItem">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"></ColumnDefinition>
+            <ColumnDefinition Width="120"></ColumnDefinition>
+            <ColumnDefinition Width="120"></ColumnDefinition>
+            <ColumnDefinition Width="120"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <Label Content="Item" HorizontalAlignment="Center" VerticalAlignment="Top"  FontSize="20"></Label>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="txbArtikelNr" Margin="0,0,0,0" HorizontalAlignment="Center"  Text="" VerticalAlignment="Bottom" IsEnabled="False" FontWeight="Bold" Background="#ffdd00"/>
+                <TextBox x:Name="txbArtikelOmschrijving" Margin="10,0,0,0" HorizontalAlignment="Center" Text="" VerticalAlignment="Bottom" FontWeight="Bold" Background="#ffdd00" IsEnabled="False"/>
+            </StackPanel>
+        </StackPanel>
+
+        <Label x:Name="lblItMc"  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="10,0,0,0">
+            <TextBlock Text="Items per mastercarton" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        </Label>
+        <TextBox x:Name="txbItMc" Grid.Column="2" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
+        <Label x:Name="lbl1" Grid.Column="2" HorizontalAlignment="Right" Margin="10,5,20,0" Grid.Row="1" Content="stuks" VerticalAlignment="Top" Width="40"/>
+
+        <Label Name="lblBruto" Content="Bruto" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+        <TextBox x:Name="txbBruto" Grid.Column="2" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="2" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
+        <Label x:Name="lbl2" Grid.Column="2" HorizontalAlignment="Right" Margin="10,5,20,0" Grid.Row="2" Content="kg" VerticalAlignment="Top" Width="40"/>
+
+        <Label Name="lblNetto" Content="Netto" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="3" VerticalAlignment="Top"/>
+        <TextBox x:Name="txbNetto" Grid.Column="2" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="3" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
+        <Label x:Name="lbl3" Grid.Column="2" HorizontalAlignment="Right" Margin="10,5,20,0" Grid.Row="3" Content="kg" VerticalAlignment="Top" Width="40"/>
+
+        <Label Content="Lengte" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="4" VerticalAlignment="Top"/>
+        <TextBox x:Name="txbLengte" Grid.Column="2" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="4" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
+        <Label x:Name="lbl4" Grid.Column="2" HorizontalAlignment="Right" Margin="10,5,20,0" Grid.Row="4" Content="cm" VerticalAlignment="Top" Width="40"/>
+
+        <Label Content="Breedte" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="5" VerticalAlignment="Top"/>
+        <TextBox x:Name="txbBreedte" Grid.Column="2" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="5" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
+        <Label x:Name="lbl5" Grid.Column="2" HorizontalAlignment="Right" Margin="10,5,20,0" Grid.Row="5" Content="cm" VerticalAlignment="Top" Width="40"/>
+
+        <Label Content="Hoogte" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="6" VerticalAlignment="Top"/>
+        <TextBox x:Name="txbHoogte" Grid.Column="2" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="6" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
+        <Label x:Name="lbl6" Grid.Column="2" HorizontalAlignment="Right" Margin="10,5,20,0" Grid.Row="6" Content="cm" VerticalAlignment="Top" Width="40"/>
+
+        <Label Name="lblKarton" Content="Karton" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="7" VerticalAlignment="Top"/>
+        <TextBox x:Name="txbKarton" Grid.Column="2" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="7" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
+        <Label x:Name="lbl7" Grid.Column="2" HorizontalAlignment="Right" Margin="10,5,20,0" Grid.Row="7" Content="kg" VerticalAlignment="Top" Width="40"/>
+
+        <Label Name="lblPlastiek" Content="Plastiek" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="8" VerticalAlignment="Top"/>
+        <TextBox x:Name="txbPlastiek" Grid.Column="2" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="8" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
+        <Label x:Name="lbl8" Grid.Column="2" HorizontalAlignment="Right" Margin="10,5,20,0" Grid.Row="8" Content="kg" VerticalAlignment="Top" Width="40"/>
+
+        <Button x:Name="btnArticlebox" Grid.Row="10" Grid.Column="0" Width="80" Height="30" Click="BtnArticlebox_Click" VerticalAlignment="Top">Articlebox</Button>
+        <Button x:Name="btnBevestig" Grid.Row="10" Grid.Column="3" Width="80" Height="30" Click="BtnBevestig_Click" VerticalAlignment="Top">Bevestig</Button>
+    </Grid>
+</Page>
